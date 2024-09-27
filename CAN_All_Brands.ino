@@ -890,7 +890,7 @@ void PressMasseyF2() {
 	buttonData.len = 8;
 	mfRollingCounter[6] += 1; // increment our last counter, let's see if we can squeeze in
 	memcpy(mfRollingCounter, buttonData.buf, 8); // copy the last message to our new message
-	buttonData.buf[3] |= 0x10; // F1
+	buttonData.buf[3] |= 0x40; // F2
 	// for (uint8_t i = 0; i < sizeof(csm2Press); i++)
 	// {
 	// 	buttonData.buf[i] = csm2Press[i];
